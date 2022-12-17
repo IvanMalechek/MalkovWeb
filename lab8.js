@@ -20,5 +20,15 @@ function showTime(){
     outTime.innerHTML=currentTime.toLocaleTimeString('ru');
 }
 
+function KruglayData(params){
+    let days=document.getElementById('days');
+    days=days.value;
+    let inputDate=document.getElementById('countdays');
+    let birthday=new Date(inputDate.value);
+    let HZ=(birthday.getTime()+days*1000*60*60*24);
+    HZ=new Date(HZ);
+    let result2 = document.getElementById('result2');
+    result2.innerHTML='Вот вам кругла дата '+HZ;
+}
 window.addEventListener('load', showDate);
 setInterval(showTime, 1000);
