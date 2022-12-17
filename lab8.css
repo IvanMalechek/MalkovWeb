@@ -25,3 +25,7 @@ body {
     left: 0;
     right: 0;
 }
+#time{
+    color:red;
+    text-align: right;
+}
